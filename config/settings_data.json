@@ -121,7 +121,7 @@
       "header": {
         "type": "header",
         "settings": {
-          "color_scheme": "accent-2",
+          "color_scheme": "inverse",
           "logo": "shopify:\/\/shop_images\/burger-png-png-images-yellow-images-12.png",
           "logo_width": 90,
           "logo_position": "top-center",
