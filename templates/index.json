@@ -2,6 +2,17 @@
   "sections": {
     "main": {
       "type": "video-carousel",
+      "blocks": {
+        "158793a5-442b-4432-8391-c886be29d1f1": {
+          "type": "video",
+          "settings": {
+            "src": "http:\/\/commondatastorage.googleapis.com\/gtv-videos-bucket\/sample\/ForBiggerEscapes.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "158793a5-442b-4432-8391-c886be29d1f1"
+      ],
       "settings": {
       }
     }
