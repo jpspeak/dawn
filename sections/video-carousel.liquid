@@ -7,14 +7,16 @@
    
 %}
 
-<div class="container" data-sources='"[
+<div class="container" data-sources='
+  "[
   {% for block in section.blocks %}
    {% case block.type  %}  
      {% when 'video' %}  
         "{{ block.settings.src }}"{% if forloop.last != true %}, {% endif %}
     {% endcase %}  
   {% endfor %}
-  ]"'>
+  ]"
+  '>
   {%  if first_src != blank %}
     <video
       src="{{ first_src }}"
