@@ -1,9 +1,27 @@
-<div class="container">
-  <video
-    src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
-    autoplay="true"
-    id="videos"
-  />
+{% liquid
+  assign first_src = '' 
+  if section.blocks[0].settings.src != blank
+    assign first_src = section.blocks[0].settings.src 
+  endif 
+
+   
+%}
+
+<div class="container" data-sources="[
+  {% for block in section.blocks %}
+   {% case block.type  %}  
+     {% when 'video' %}   
+        {{ block.settings.src }}
+    {% endcase %}  
+  {% endfor %}
+  ]">
+  {%  if first_src != blank %}
+    <video
+      src="{{ first_src }}"
+      autoplay="true"
+      id="videos"
+    />
+  {% endif %}
 </div>
 
 {% schema %}
