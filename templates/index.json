@@ -8,10 +8,17 @@
           "settings": {
             "src": "http:\/\/commondatastorage.googleapis.com\/gtv-videos-bucket\/sample\/ForBiggerEscapes.mp4"
           }
+        },
+        "1486955b-f011-4e54-9f93-6f33f392a5b7": {
+          "type": "video",
+          "settings": {
+            "src": "http:\/\/commondatastorage.googleapis.com\/gtv-videos-bucket\/sample\/ForBiggerBlazes.mp4"
+          }
         }
       },
       "block_order": [
-        "158793a5-442b-4432-8391-c886be29d1f1"
+        "158793a5-442b-4432-8391-c886be29d1f1",
+        "1486955b-f011-4e54-9f93-6f33f392a5b7"
       ],
       "settings": {
       }
