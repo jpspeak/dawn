@@ -11,7 +11,7 @@
         if forloop.last == true 
           assign separator = ''
         endif
-        assign sources = sources 
+        assign sources = sources | append:block.settings.src | append:separator
     endcase 
   endfor
 %}
