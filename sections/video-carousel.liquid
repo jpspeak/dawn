@@ -3,18 +3,20 @@
   if section.blocks[0].settings.src != blank
     assign first_src = section.blocks[0].settings.src 
   endif 
-
-   
+  assign sources = ''
+  assign separator = ','
+  for block in section.blocks
+    case block.type
+      when 'video' 
+        if forloop.last == true 
+          assign separator = ''
+        endif
+        assign sources = sources 
+    endcase 
+  endfor
 %}
 
-<div class="container" data-sources='
-  "[{% for block in section.blocks %}
-   {% case block.type  %}  
-     {% when 'video' %}  
-        "{{ block.settings.src }}"{% if forloop.last != true %}, {% endif %}
-    {% endcase %}  
-  {% endfor %}]"
-  '>
+<div class="container" data-sources="{{ sources }}">
   {%  if first_src != blank %}
     <video
       src="{{ first_src }}"
