@@ -561,7 +561,7 @@
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
 <script>
-  console.log({{ product.variants | json }})
+  console.log({{ product.variants[0].metafields | json }})
 </script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
