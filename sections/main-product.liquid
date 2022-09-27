@@ -560,7 +560,9 @@
     </script>
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
-
+<script>
+  console.log({{ product.variants | json }})
+</script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       function isIE() {
