@@ -562,7 +562,7 @@
   {%- endif -%}
 <script>
   console.log({{ product.variants[0].metafields.custom | json }})
-  console.log({{ product.metafields.custom.shade_categories.type | json }})
+  console.log({{ product.metafields.custom.shade_categories.list | json }})
 </script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
