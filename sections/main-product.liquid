@@ -421,12 +421,12 @@
                   </svg>
                   <span class="product-form__error-message"></span>
                 </div>
-
+{% render "klaviyo--coming-soon" %}
                 {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                   <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}" disabled>
                   <input id="custom-property" type="hidden" name="properties[Custom property]" value="{{ 'now' | date: "%s"}}" />
                   <div class="product-form__buttons">
-                   {% render "klaviyo--coming-soon" %}
+                   
                     <button
                       type="submit"
                       name="add"
