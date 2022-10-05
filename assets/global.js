@@ -750,6 +750,7 @@ class VariantSelects extends HTMLElement {
   }
 
   onVariantChange() {
+    alert()
     this.updateOptions();
     this.updateMasterId();
     this.toggleAddButton(true, '', false);
