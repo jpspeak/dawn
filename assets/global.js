@@ -840,6 +840,8 @@ class VariantSelects extends HTMLElement {
         const html = new DOMParser().parseFromString(responseText, 'text/html')
         const destination = document.getElementById(`price-${this.dataset.section}`);
         const source = html.getElementById(`price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`);
+        console.log(destination)
+        console.log(source)
         if (source && destination) destination.innerHTML = source.innerHTML;
 
         const price = document.getElementById(`price-${this.dataset.section}`);
